@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.22" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.11" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+    <PackageReference Include="MQTTnet" Version="5.2.0.1603" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\HomeServer.Persistence\HomeServer.Persistence.csproj" />
+    <ProjectReference Include="..\..\SDK\HomeServer.SDK\HomeServer.SDK.csproj" />
+    <ProjectReference Include="..\..\Core\HomeServer.Core\HomeServer.Core.csproj" />
+    <ProjectReference Include="..\..\Core\HomeServer.Mqtt\HomeServer.Mqtt.csproj" />
+  </ItemGroup>
+
+</Project>

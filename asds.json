@@ -1,0 +1,62 @@
+{
+    "protocol": "http",
+    "port": "5035",
+    "system": {
+        "vendor": "HomeServer",
+        "adapter": "HomeServer",
+        "protocolVersion": "1.0",
+        "firmwareVersion": "1.0.0"
+    },
+    "device": {
+        "externalId": "lamp-01",
+        "name": "Test Lamp",
+        "info": {
+            "vendor": "HomeServer",
+            "product": "Smart Lamp",
+            "model": "HS-LAMP-01",
+            "hardwareVersion": "1.0",
+            "firmwareVersion": "1.0.0",
+            "serialNumber": "HS000001",
+            "macAddress": "AA:BB:CC:DD:EE:FF",
+            "buildDate": "2026-06-27",
+            "description": "HomeServer Test Device",
+            "additionalData": {
+                "chip": "ESP32",
+                "flash": "4MB",
+                "sdk": "ESP-IDF 5.4.1"
+            }
+        },
+        "commands": [
+            {
+                "key": "power",
+                "name": "Power",
+                "controlType": "Toggle",
+                "valueType": "bool",
+                "endpoint": "api/command/power",
+                "httpMethod": "POST",
+                "configuration": null
+            },
+            {
+                "key": "brightness",
+                "name": "Brightness",
+                "controlType": "Slider",
+                "valueType": "int",
+                "endpoint": "api/command/brightness",
+                "httpMethod": "POST",
+                "configuration": {
+                    "min": 0,
+                    "max": 100
+                }
+            }
+        ],
+        "telemetries": [
+            {
+                "key": "temperature",
+                "name": "Temperature",
+                "valueType": "float",
+                "unit": "\u00B0C",
+                "configuration": null
+            }
+        ]
+    }
+}

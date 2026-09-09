@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.22">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\HomeServer.Persistence\HomeServer.Persistence.csproj" />
+    <ProjectReference Include="..\..\Modules\HomeServer.Modules.Devices\HomeServer.Modules.Devices.csproj" />
+    <ProjectReference Include="..\..\SDK\HomeServer.SDK\HomeServer.SDK.csproj" />
+    <ProjectReference Include="..\..\Core\HomeServer.Mqtt\HomeServer.Mqtt.csproj" />
+    <ProjectReference Include="..\..\Core\HomeServer.Core\HomeServer.Core.csproj" />
+  </ItemGroup>
+
+</Project>
